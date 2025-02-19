@@ -7,18 +7,10 @@ int main()
 
     int m, n;
     cout << "Iveskite studentu skaiciu: ";
-    cin >> m;
+    m=readInteger();
 
-    if (m==0) //???? sutvarkyk
-    {
-        cout <<"Ivestas netinkamas skaicius nusakantis studentu skaiciu" << endl; 
-        return 1;
-    }
-
-    else
-    {
-        cout << "Iveskite studentu namu darbu skaiciu: ";
-        n=readInteger();
+    cout << "Iveskite studentu namu darbu skaiciu: ";
+    n=readInteger();
 
         for (int i=0; i<m; i++)
         {
@@ -47,23 +39,23 @@ int main()
 
         if (ats == 'v' or ats == 'V')
         {
-            cout <<std::left <<  setw(15) << "Pavarde" << setw(15) << "Vardas" << setw(20)  <<" Galutinis(Vid.)" << endl;
+            cout << std::left << setw(15) << "Pavarde" << setw(15) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
             cout << std::string(50, '-') << endl;
             for (auto a : grupe)
             {
                 double galutinis = 0.4 * skaiciuotiVid(a.nd) + 0.6 * a.egz;
-                cout << std::left << setw(15) << a.pav << setw(15) << a.var <<setw(3) <<  std::fixed << std::setprecision(2) << galutinis << endl;
+                cout << std::left << setw(15) << a.pav << setw(15) << a.var <<  std::fixed << std::setprecision(2) << galutinis << endl;
             }
 
         }
         else if (ats == 'm' or ats =='M')
         {
-            cout <<std::left <<  setw(15) << "Pavarde" << setw(15) << "Vardas" << setw(20)  <<" Galutinis(Med.)" << endl;
+            cout <<std::left <<  setw(15) << "Pavarde" << setw(15) << "Vardas" << setw(20)  <<"Galutinis(Med.)" << endl;
             cout << std::string(50, '-') << endl;
             for (auto a : grupe)
                 {
                     double galutinis = 0.4 * skaiciuotiMed(a.nd) + 0.6 * a.egz;
-                    cout << std::left << setw(15) << a.pav << setw(15) << a.var <<setw(3) <<  std::fixed << std::setprecision(2) << galutinis << endl;
+                    cout << std::left << setw(15) << a.pav << setw(15) << a.var << std::fixed << std::setprecision(2) << galutinis << endl;
                 }
         }
         else
@@ -71,14 +63,9 @@ int main()
             cout << "Netinkamai atsakytas klausimas apie galutinio balo skaiciavima" <<endl;
             return 1;
         }
-    }
     return 0;
 }
-//--------------------------
-//padaryt kiekvieno ivedamo duomenu patikrinima
-//padaryt pasirinktinai meniu
 
-//isdestyt lentele??
 
 
 
