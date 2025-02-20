@@ -2,7 +2,10 @@
 
 double skaiciuotiVid(vector<int> nd) 
 {
-    if (nd.empty()) return 0.0;
+    if (nd.empty()) 
+    {
+        throw std::runtime_error("Namu darbu sarasas negali buti tuscias.");
+    }
     else
     {
         double suma = 0.0;
@@ -17,7 +20,9 @@ double skaiciuotiVid(vector<int> nd)
 //---
 double skaiciuotiMed(vector<int> nd) 
 {
-    if (nd.empty()) return 0.0;
+    if (nd.empty()) {
+        throw std::runtime_error("Namu darbu sarasas negali buti tuscias.");
+    }
     else
     {
         sort(nd.begin(), nd.end());
