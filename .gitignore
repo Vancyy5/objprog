@@ -402,4 +402,8 @@ FodyWeavers.xsd
 *.log
 *.env
 *.exe
+*.o
+
+test_files/
+
 node_modules/

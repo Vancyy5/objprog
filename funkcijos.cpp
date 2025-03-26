@@ -123,7 +123,7 @@ void skaitytiIsFailo(vector<Stud>& grupe)
     
     if (!inputFile.is_open()) 
     {
-        std::cerr << "Nepavyko atidaryti failo" << endl; exit(1);
+        throw std::runtime_error("Nepavyko atidaryti failo"); 
     }
     Stud laik;
     string line;
